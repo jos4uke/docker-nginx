@@ -10,8 +10,6 @@ ENV LANG fr_FR.utf8
 RUN echo "Europe/Paris" > /etc/timezone
 RUN dpkg-reconfigure -f noninteractive tzdata
 
-COPY content /usr/share/nginx/html
-
 ADD conf/nginx.conf /etc/nginx/
 ADD conf/proxy.conf /etc/nginx/conf.d/
 #ADD conf/kube-ui.conf /etc/nginx/sites-available/
