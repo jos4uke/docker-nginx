@@ -2,6 +2,10 @@ FROM nginx
 
 MAINTAINER	Joseph Tran <Joseph.Tran@versailles.inra.fr>
 
+# set locales
+RUN localedef -i fr_FR -c -f UTF-8 -A /usr/share/locale/locale.alias fr_FR.UTF-8
+ENV LANG fr_FR.utf8
+
 COPY content /usr/share/nginx/html
 
 ADD conf/nginx.conf /etc/nginx/
