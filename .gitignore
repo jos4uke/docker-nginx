@@ -5,4 +5,4 @@ nbproject/private
 bin
 .DS_Store
 test/*
-*/sites-enabled/*.conf
+*/*/sites-enabled/*.conf
